@@ -1,0 +1,33 @@
+✔ demo contains 12 fictional attendees and agrees with the sample file (3.2605ms)
+✔ UTF-8 BOM, CRLF, blank lines and surrounding whitespace (0.1813ms)
+✔ quoted commas and escaped double quotes (0.1222ms)
+✔ multiline quoted values are normalized for badges (0.0937ms)
+✔ reordered, case-insensitive headers and British organisation spelling (0.123ms)
+✔ additional named columns are ignored (0.0964ms)
+✔ missing required headers explain the problem (0.2903ms)
+✔ duplicate and alias-colliding headers are rejected (0.1344ms)
+✔ unclosed quotes are rejected with line numbers (0.141ms)
+✔ stray quotes and text after closing quotes are rejected (0.1783ms)
+✔ whitespace after a closing quote is accepted (0.1019ms)
+✔ extra and missing cells are rejected rather than shifted (0.1124ms)
+✔ blank input, blank records and header-only lists have no attendees (0.176ms)
+✔ a populated record without a name fails the whole import (0.1415ms)
+✔ organization can be empty and missing role defaults to Attendee (1.0027ms)
+✔ duplicate names represent distinct badges (0.0943ms)
+✔ non-ASCII names and emoji are preserved (0.1504ms)
+✔ HTML-like values remain ordinary data (0.2449ms)
+✔ field limits accept the boundary and reject one character over (0.2775ms)
+✔ input and attendee limits prevent unbounded work (15.4691ms)
+✔ control characters are rejected (0.2163ms)
+✔ error lines account for quoted newlines (0.0877ms)
+✔ pagination handles empty, partial, exact and overflow pages without loss (0.4198ms)
+✔ invalid page sizes fail clearly (0.4862ms)
+✔ reader rejects non-text input (0.0973ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 127.7169

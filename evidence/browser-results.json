@@ -1,0 +1,238 @@
+{
+  "date": "2026-11-06T12:49:34.296Z",
+  "browser": "156.0.8078.80",
+  "platform": "win32",
+  "node": "v24.16.0",
+  "offline": true,
+  "appRoot": "C:\\Users\\TTK\\Documents\\ChatGPT\\Session\\event-badge-maker-studio",
+  "passed": 56,
+  "failed": 0,
+  "errors": [],
+  "network": [],
+  "results": [
+    {
+      "name": "landing page has the premium hero, ten real previews and correct page identity",
+      "status": "passed"
+    },
+    {
+      "name": "Start Designing opens the working editor without reloading data",
+      "status": "passed"
+    },
+    {
+      "name": "landing previews open their chosen template; returning home keeps edits",
+      "status": "passed"
+    },
+    {
+      "name": "coordinate fields are absent; typography and layer controls remain",
+      "status": "passed"
+    },
+    {
+      "name": "single-click name editing keeps attendee names independent and CSV-bound",
+      "status": "passed"
+    },
+    {
+      "name": "attendee edits follow the person across templates and undo/redo",
+      "status": "passed"
+    },
+    {
+      "name": "bound organization and role text can be edited directly",
+      "status": "passed"
+    },
+    {
+      "name": "Escape cancels a text draft and empty names retain the last valid value",
+      "status": "passed"
+    },
+    {
+      "name": "inspector text edits preserve attendee binding without Custom Text conversion",
+      "status": "passed"
+    },
+    {
+      "name": "event, company and custom text support direct editing",
+      "status": "passed"
+    },
+    {
+      "name": "text dragging and corner resizing work without numeric fields",
+      "status": "passed"
+    },
+    {
+      "name": "typing does not move text; blue-label dragging works during editing",
+      "status": "passed"
+    },
+    {
+      "name": "duplicate, delete and layer ordering remain undoable",
+      "status": "passed"
+    },
+    {
+      "name": "uploading into My Assets inserts nothing into any template",
+      "status": "passed"
+    },
+    {
+      "name": "placing an image changes only the chosen template",
+      "status": "passed"
+    },
+    {
+      "name": "image dragging and resizing preserve file and placement identity",
+      "status": "passed"
+    },
+    {
+      "name": "one asset can be placed independently on another template",
+      "status": "passed"
+    },
+    {
+      "name": "badge-only placement appears for one attendee and stays hidden for the others",
+      "status": "passed"
+    },
+    {
+      "name": "replacing one placement from the library leaves other placements unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "placing a background is explicit and participates in remove-all",
+      "status": "passed"
+    },
+    {
+      "name": "remove-all confirmation can cancel; acceptance removes every placement in one undo step",
+      "status": "passed"
+    },
+    {
+      "name": "remove from current design keeps placements on other templates",
+      "status": "passed"
+    },
+    {
+      "name": "replacing a library file keeps placement geometry and updates references",
+      "status": "passed"
+    },
+    {
+      "name": "deleting a library asset confirms all removals and Undo restores it",
+      "status": "passed"
+    },
+    {
+      "name": "invalid uploads leave the library and placements unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "saved projects round-trip assets, badge scopes, edits and active attendee",
+      "status": "passed"
+    },
+    {
+      "name": "PNG export matches canvas pixels after editing and attendee/template switching",
+      "status": "passed"
+    },
+    {
+      "name": "export during an active text edit commits the draft and matches the canvas",
+      "status": "passed"
+    },
+    {
+      "name": "legacy version 2 projects migrate logos and backgrounds without losing placements",
+      "status": "passed"
+    },
+    {
+      "name": "invalid projects cannot insert remote assets or change the current project",
+      "status": "passed"
+    },
+    {
+      "name": "CSV import, quoted cells, invalid and empty lists remain functional",
+      "status": "passed"
+    },
+    {
+      "name": "literal HTML-like text remains inert data during direct editing",
+      "status": "passed"
+    },
+    {
+      "name": "text overflow blocks export until auto-fit fixes it",
+      "status": "passed"
+    },
+    {
+      "name": "orientation filters show five templates each",
+      "status": "passed"
+    },
+    {
+      "name": "Editorial: 3x export preserves the original template design",
+      "status": "passed"
+    },
+    {
+      "name": "Signal: 3x export preserves the original template design",
+      "status": "passed"
+    },
+    {
+      "name": "Modular: 3x export preserves the original template design",
+      "status": "passed"
+    },
+    {
+      "name": "Contour: 3x export preserves the original template design",
+      "status": "passed"
+    },
+    {
+      "name": "Spectrum: 3x export preserves the original template design",
+      "status": "passed"
+    },
+    {
+      "name": "Executive: 3x export preserves the original template design",
+      "status": "passed"
+    },
+    {
+      "name": "Split: 3x export preserves the original template design",
+      "status": "passed"
+    },
+    {
+      "name": "Studio: 3x export preserves the original template design",
+      "status": "passed"
+    },
+    {
+      "name": "Vector: 3x export preserves the original template design",
+      "status": "passed"
+    },
+    {
+      "name": "Index: 3x export preserves the original template design",
+      "status": "passed"
+    },
+    {
+      "name": "all demo attendees and maximum-length fields fit every template",
+      "status": "passed"
+    },
+    {
+      "name": "1x and 4x exports have the correct dimensions",
+      "status": "passed"
+    },
+    {
+      "name": "batch export includes all twelve distinct 3x PNGs",
+      "status": "passed"
+    },
+    {
+      "name": "batch rejects a later attendee that cannot fit without a partial ZIP",
+      "status": "passed"
+    },
+    {
+      "name": "batch cancellation restores controls and creates no partial download",
+      "status": "passed"
+    },
+    {
+      "name": "320px landing/editor layout has no overflow and text remains editable",
+      "status": "passed"
+    },
+    {
+      "name": "390px landing/editor layout has no overflow and text remains editable",
+      "status": "passed"
+    },
+    {
+      "name": "768px landing/editor layout has no overflow and text remains editable",
+      "status": "passed"
+    },
+    {
+      "name": "1024px landing/editor layout has no overflow and text remains editable",
+      "status": "passed"
+    },
+    {
+      "name": "touch dragging works on a phone without coordinate inputs",
+      "status": "passed"
+    },
+    {
+      "name": "three library tabs support keyboard navigation",
+      "status": "passed"
+    },
+    {
+      "name": "page identity, meaningful content, no error overlay, no console errors or external requests",
+      "status": "passed"
+    }
+  ]
+}

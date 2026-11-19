@@ -1,0 +1,548 @@
+{
+  "timestamp": "2026-11-06T10:55:23.929624+00:00",
+  "passed": 80,
+  "failed": 0,
+  "results": [
+    {
+      "name": "minimal-demo.pdf: page count",
+      "status": "PASS",
+      "detail": 2
+    },
+    {
+      "name": "minimal-demo.pdf: every page is A4 portrait",
+      "status": "PASS",
+      "detail": [
+        [
+          594.96,
+          841.92
+        ],
+        [
+          594.96,
+          841.92
+        ]
+      ]
+    },
+    {
+      "name": "minimal-demo.pdf: text respects page margins",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "minimal: page 1 has exactly its six attendee names",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "minimal: page 1 includes organizations and roles",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "minimal: page 1 has no editor controls",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "minimal: page 2 has exactly its six attendee names",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "minimal: page 2 includes organizations and roles",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "minimal: page 2 has no editor controls",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "conference-demo.pdf: page count",
+      "status": "PASS",
+      "detail": 2
+    },
+    {
+      "name": "conference-demo.pdf: every page is A4 portrait",
+      "status": "PASS",
+      "detail": [
+        [
+          594.96,
+          841.92
+        ],
+        [
+          594.96,
+          841.92
+        ]
+      ]
+    },
+    {
+      "name": "conference-demo.pdf: text respects page margins",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "conference: page 1 has exactly its six attendee names",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "conference: page 1 includes organizations and roles",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "conference: page 1 has no editor controls",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "conference: page 2 has exactly its six attendee names",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "conference: page 2 includes organizations and roles",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "conference: page 2 has no editor controls",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "creative-demo.pdf: page count",
+      "status": "PASS",
+      "detail": 2
+    },
+    {
+      "name": "creative-demo.pdf: every page is A4 portrait",
+      "status": "PASS",
+      "detail": [
+        [
+          594.96,
+          841.92
+        ],
+        [
+          594.96,
+          841.92
+        ]
+      ]
+    },
+    {
+      "name": "creative-demo.pdf: text respects page margins",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "creative: page 1 has exactly its six attendee names",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "creative: page 1 includes organizations and roles",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "creative: page 1 has no editor controls",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "creative: page 2 has exactly its six attendee names",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "creative: page 2 includes organizations and roles",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "creative: page 2 has no editor controls",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "pagination-1.pdf: page count",
+      "status": "PASS",
+      "detail": 1
+    },
+    {
+      "name": "pagination-1.pdf: every page is A4 portrait",
+      "status": "PASS",
+      "detail": [
+        [
+          594.96,
+          841.92
+        ]
+      ]
+    },
+    {
+      "name": "pagination-1.pdf: text respects page margins",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "1 attendees: every name appears once in source order",
+      "status": "PASS",
+      "detail": [
+        1
+      ]
+    },
+    {
+      "name": "1 attendees: no name crosses a page break",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "pagination-6.pdf: page count",
+      "status": "PASS",
+      "detail": 1
+    },
+    {
+      "name": "pagination-6.pdf: every page is A4 portrait",
+      "status": "PASS",
+      "detail": [
+        [
+          594.96,
+          841.92
+        ]
+      ]
+    },
+    {
+      "name": "pagination-6.pdf: text respects page margins",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "6 attendees: every name appears once in source order",
+      "status": "PASS",
+      "detail": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "6 attendees: no name crosses a page break",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "pagination-7.pdf: page count",
+      "status": "PASS",
+      "detail": 2
+    },
+    {
+      "name": "pagination-7.pdf: every page is A4 portrait",
+      "status": "PASS",
+      "detail": [
+        [
+          594.96,
+          841.92
+        ],
+        [
+          594.96,
+          841.92
+        ]
+      ]
+    },
+    {
+      "name": "pagination-7.pdf: text respects page margins",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "7 attendees: every name appears once in source order",
+      "status": "PASS",
+      "detail": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "7 attendees: no name crosses a page break",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "pagination-12.pdf: page count",
+      "status": "PASS",
+      "detail": 2
+    },
+    {
+      "name": "pagination-12.pdf: every page is A4 portrait",
+      "status": "PASS",
+      "detail": [
+        [
+          594.96,
+          841.92
+        ],
+        [
+          594.96,
+          841.92
+        ]
+      ]
+    },
+    {
+      "name": "pagination-12.pdf: text respects page margins",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "12 attendees: every name appears once in source order",
+      "status": "PASS",
+      "detail": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "name": "12 attendees: no name crosses a page break",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "pagination-13.pdf: page count",
+      "status": "PASS",
+      "detail": 3
+    },
+    {
+      "name": "pagination-13.pdf: every page is A4 portrait",
+      "status": "PASS",
+      "detail": [
+        [
+          594.96,
+          841.92
+        ],
+        [
+          594.96,
+          841.92
+        ],
+        [
+          594.96,
+          841.92
+        ]
+      ]
+    },
+    {
+      "name": "pagination-13.pdf: text respects page margins",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "13 attendees: every name appears once in source order",
+      "status": "PASS",
+      "detail": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "name": "13 attendees: no name crosses a page break",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "seven-attendees.pdf: page count",
+      "status": "PASS",
+      "detail": 2
+    },
+    {
+      "name": "seven-attendees.pdf: every page is A4 portrait",
+      "status": "PASS",
+      "detail": [
+        [
+          594.96,
+          841.92
+        ],
+        [
+          594.96,
+          841.92
+        ]
+      ]
+    },
+    {
+      "name": "seven-attendees.pdf: text respects page margins",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "long-minimal.pdf: page count",
+      "status": "PASS",
+      "detail": 1
+    },
+    {
+      "name": "long-minimal.pdf: every page is A4 portrait",
+      "status": "PASS",
+      "detail": [
+        [
+          594.96,
+          841.92
+        ]
+      ]
+    },
+    {
+      "name": "long-minimal.pdf: text respects page margins",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "long minimal: full event is present",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "long minimal: full name is present",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "long minimal: full organization is present",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "long minimal: full role is present",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "long-conference.pdf: page count",
+      "status": "PASS",
+      "detail": 1
+    },
+    {
+      "name": "long-conference.pdf: every page is A4 portrait",
+      "status": "PASS",
+      "detail": [
+        [
+          594.96,
+          841.92
+        ]
+      ]
+    },
+    {
+      "name": "long-conference.pdf: text respects page margins",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "long conference: full event is present",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "long conference: full name is present",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "long conference: full organization is present",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "long conference: full role is present",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "long-creative.pdf: page count",
+      "status": "PASS",
+      "detail": 1
+    },
+    {
+      "name": "long-creative.pdf: every page is A4 portrait",
+      "status": "PASS",
+      "detail": [
+        [
+          594.96,
+          841.92
+        ]
+      ]
+    },
+    {
+      "name": "long-creative.pdf: text respects page margins",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "long creative: full event is present",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "long creative: full name is present",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "long creative: full organization is present",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "long creative: full role is present",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "invalid-input.pdf: page count",
+      "status": "PASS",
+      "detail": 1
+    },
+    {
+      "name": "invalid-input.pdf: every page is A4 portrait",
+      "status": "PASS",
+      "detail": [
+        [
+          594.96,
+          841.92
+        ]
+      ]
+    },
+    {
+      "name": "invalid-input.pdf: text respects page margins",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Invalid input prints a diagnostic instead of stale badges",
+      "status": "PASS",
+      "detail": null
+    }
+  ]
+}

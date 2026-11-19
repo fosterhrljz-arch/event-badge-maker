@@ -1,0 +1,3 @@
+761434c30acc11ded7869f51ea5e81949ea2b5a1c521ef22238cf8953b873cfb  event-badge-maker-studio-v2.zip
+6b86c9db6d0773c46f488a860e8663096480fedae9b01938e8585ea5f3f36fde  event-badge-maker-studio.zip
+5c81cde3b5d6daa9df5e9a33f05f65ebfae69ecc4fec54f370717f8232a8f2f7  event-badge-maker.zip

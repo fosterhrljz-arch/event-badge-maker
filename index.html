@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Event Badge Maker — Offline Studio</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="core.js" defer></script><script src="model.js" defer></script><script src="renderer.js" defer></script><script src="zip.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-defs" aria-hidden="true"><defs>
+    <symbol id="i-badge" viewBox="0 0 24 28"><rect x="2" y="7" width="20" height="19" rx="3"/><rect x="9" y="1" width="6" height="9" rx="2"/><path d="M7 16h10M7 21h6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M4 16v5h16v-5"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V3m-4 4 4-4 4 4M4 15v6h16v-6"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 20V5h7l2 3h9v12z"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24"><path d="M3 3h15l3 3v15H3zM7 3v6h9V3M7 21v-8h10v8"/></symbol>
+    <symbol id="i-undo" viewBox="0 0 24 24"><path d="m8 4-5 5 5 5M3 9h11a6 6 0 0 1 0 12"/></symbol>
+    <symbol id="i-redo" viewBox="0 0 24 24"><path d="m16 4 5 5-5 5M21 9H10a6 6 0 0 0 0 12"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 7V3h16v4M12 3v18M8 21h8"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="1"/><path d="M15 8V3H3v13h5"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 6h16M9 6V3h6v3M6 6l1 15h10l1-15M10 10v7M14 10v7"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#stage">Skip to badge canvas</a>
+  <section id="landing" aria-label="Event Badge Maker home">
+    <nav class="landing-nav"><a class="landing-brand" href="#home"><svg aria-hidden="true"><use href="#i-badge"/></svg>Event Badge Maker</a><div><a href="#collection">Templates</a><button class="landing-primary" data-start>Start Designing</button></div></nav>
+    <section class="landing-hero"><h1>A great introduction.<br>Designed by you.</h1><p>Create beautiful event badges. Personalize every detail.<br class="hero-break"> Export in brilliant resolution — entirely offline.</p><div class="hero-actions"><button class="landing-primary" data-start>Start Designing</button><a href="#collection">Explore templates</a></div><div class="hero-badges" aria-label="Original badge previews"><canvas data-hero="signal" aria-label="Signal badge"></canvas><canvas data-hero="editorial" aria-label="Editorial badge"></canvas><canvas data-hero="split" aria-label="Split badge"></canvas></div></section>
+    <section id="collection" class="landing-collection"><h2>Ten templates. Your signature.</h2><p>Choose a starting point. Make it yours.</p><div id="landing-templates"></div></section>
+    <footer class="landing-footer">Event Badge Maker · Made to work offline.</footer>
+  </section>
+  <header hidden class="topbar" id="topbar">
+    <div class="brand"><svg aria-hidden="true"><use href="#i-badge"/></svg><a class="editor-home" href="#home" aria-label="Event Badge Maker home"><strong>Event Badge Maker</strong></a><span>Offline studio</span></div>
+    <div class="header-actions"><button id="open-project" class="button"><svg aria-hidden="true"><use href="#i-folder"/></svg><span>Open project</span></button><button id="save-project" class="button"><svg aria-hidden="true"><use href="#i-save"/></svg><span>Save project</span></button><button id="export-png" class="button primary"><svg aria-hidden="true"><use href="#i-download"/></svg><span>Export PNG</span></button></div>
+  </header>
+  <main hidden class="app-shell" id="app-shell">
+    <aside class="library" aria-label="Templates and attendee data">
+      <div class="tabs" role="tablist" aria-label="Library"><button id="templates-tab" role="tab" aria-selected="true" aria-controls="templates-panel">Templates</button><button id="attendees-tab" role="tab" aria-selected="false" aria-controls="attendees-panel" tabindex="-1">Attendees</button><button id="assets-tab" role="tab" aria-selected="false" aria-controls="assets-panel" tabindex="-1">My Assets</button></div>
+      <section id="templates-panel" role="tabpanel" aria-labelledby="templates-tab">
+        <div class="library-intro"><h1>A good first impression.</h1><p>10 original layouts. Make one yours.</p></div>
+        <div class="filters" role="group" aria-label="Template orientation"><button data-filter="all" aria-pressed="true">All</button><button data-filter="portrait" aria-pressed="false">Portrait</button><button data-filter="landscape" aria-pressed="false">Landscape</button></div>
+        <div class="template-grid" id="template-grid"></div>
+        <p class="library-foot">Original designs. Your identity.</p>
+      </section>
+      <section id="attendees-panel" role="tabpanel" aria-labelledby="attendees-tab" hidden>
+        <h2>Your event, your people.</h2><p class="muted">One design. A badge for everyone.</p>
+        <label for="company-name">Company name</label><input id="company-name" maxlength="100" autocomplete="off">
+        <label for="event-name">Event name</label><input id="event-name" maxlength="200" autocomplete="off">
+        <label for="csv-input">Attendee CSV</label><textarea id="csv-input" spellcheck="false" aria-describedby="csv-help csv-status"></textarea>
+        <div class="button-row"><button id="import-csv" class="button"><svg aria-hidden="true"><use href="#i-upload"/></svg>Import CSV</button><button id="load-demo" class="button">Demo</button></div>
+        <p id="csv-help" class="hint">Headers: name, organization, role. Quote values that contain commas.</p><p id="csv-status" role="status" aria-live="polite"></p>
+        <p class="hint">Click a badge name to edit only that attendee. Save your project to keep your design, images, and attendees.</p>
+      </section>
+      <section id="assets-panel" role="tabpanel" aria-labelledby="assets-tab" hidden>
+        <h2>Your asset library.</h2><p class="muted">Upload once. Place where you choose.</p>
+        <button id="upload-assets" class="button wide"><svg aria-hidden="true"><use href="#i-upload"/></svg>Upload images</button><p class="hint">PNG, JPEG, WebP · up to 12 MB each. Uploads stay here until you place them.</p>
+        <div id="asset-list" class="asset-list"></div><p id="asset-empty" class="hint">Your logos, images, and backgrounds will appear here. Save your project to keep them.</p>
+        <div id="asset-details" hidden><h3 id="asset-name"></h3><p id="asset-usage" class="hint"></p><label for="placement-scope">Place on</label><select id="placement-scope"><option value="template">This template · all attendees</option><option value="badge">This badge only</option></select>
+        <div class="button-row"><button id="place-image" class="button">Place image</button><button id="place-background" class="button">As background</button></div>
+        <div class="asset-management"><button id="replace-asset" class="text-button">Replace library file</button><button id="remove-design-placements" class="text-button">Remove from this design</button><button id="remove-all-placements" class="text-button">Remove all placements</button><button id="delete-asset" class="text-button">Delete from library</button></div></div>
+      </section>
+    </aside>
+    <section class="workspace" aria-label="Badge design workspace">
+      <div class="canvas-toolbar"><div><h2 id="design-name">Editorial</h2><p id="design-size">Portrait · 600 × 900</p></div><div class="button-row"><button id="add-text" class="button"><svg aria-hidden="true"><use href="#i-text"/></svg>Add text</button><button id="undo" class="button icon-button" aria-label="Undo" title="Undo (Ctrl/Cmd+Z)"><svg aria-hidden="true"><use href="#i-undo"/></svg></button><button id="redo" class="button icon-button" aria-label="Redo" title="Redo (Ctrl/Cmd+Shift+Z)"><svg aria-hidden="true"><use href="#i-redo"/></svg></button></div></div>
+      <div class="canvas-area" id="canvas-area">
+        <div id="canvas-shell"><div id="stage" tabindex="0" role="group" aria-label="Editable badge. Click text to edit; drag an element or its label to move. Enter edits selected text. Arrow keys move the selected element; Shift moves by ten pixels."><canvas id="badge-canvas" aria-label="Current attendee badge"></canvas><textarea id="inline-editor" aria-label="Edit badge text" spellcheck="false" hidden></textarea><div id="selection" hidden><span class="selection-tag" id="selection-tag" data-move="true" title="Drag to move">Attendee name</span><span class="handle nw" data-handle="nw"></span><span class="handle ne" data-handle="ne"></span><span class="handle sw" data-handle="sw"></span><span class="handle se" data-handle="se"></span></div></div></div>
+        <div id="empty-state" class="empty-state" hidden><svg aria-hidden="true"><use href="#i-badge"/></svg><h3>Add your attendees</h3><p>Open the Attendees tab to paste a CSV or load the demo.</p></div>
+      </div>
+      <div class="canvas-footer"><div class="attendee-navigation"><button id="prev-attendee" class="button icon-button" aria-label="Previous attendee"><svg aria-hidden="true"><use href="#i-left"/></svg></button><select id="attendee-select" aria-label="Preview attendee"></select><button id="next-attendee" class="button icon-button" aria-label="Next attendee"><svg aria-hidden="true"><use href="#i-right"/></svg></button><span id="attendee-count">1 of 12 attendees</span></div><p id="edit-scope">Layout changes apply to this template. Names stay independent.</p><p class="fit-status" id="fit-status" role="status"></p></div>
+      <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+    </section>
+    <aside class="inspector" aria-label="Design properties">
+      <section class="properties-section"><h2 id="properties-title">Text properties</h2><label for="element-select">Selected element</label><select id="element-select"></select>
+        <div id="text-controls">
+          <label for="content-source">Content source</label><select id="content-source"><option value="name">Attendee name</option><option value="organization">Organization</option><option value="role">Role</option><option value="event">Event name</option><option value="company">Company name</option><option value="custom">Custom text</option></select>
+          <div id="custom-text-wrap"><label for="custom-text">Text</label><textarea id="custom-text" rows="3" maxlength="1000"></textarea><p id="text-scope" class="hint"></p></div>
+          <label for="font-family">Font</label><select id="font-family"><option>Arial</option><option>Georgia</option><option>Trebuchet MS</option><option>Verdana</option><option>Courier New</option></select>
+          <div class="two-columns"><div><label for="font-size">Size</label><input id="font-size" type="number" min="10" max="200" step="1"></div><div><label for="font-weight">Weight</label><select id="font-weight"><option value="400">Regular</option><option value="600">Semibold</option><option value="700">Bold</option></select></div></div>
+          <div class="two-columns"><div><label for="text-color">Text color</label><input id="text-color" type="color"></div><div><label for="text-align">Alignment</label><select id="text-align"><option value="left">Left</option><option value="center">Center</option><option value="right">Right</option></select></div></div>
+          <div class="two-columns"><label class="check"><input id="text-italic" type="checkbox">Italic</label><label class="check"><input id="text-uppercase" type="checkbox">Uppercase</label></div>
+          <label class="check"><input id="auto-fit" type="checkbox">Auto-fit text to box</label>
+          <details class="type-details"><summary>Type spacing</summary><div class="two-columns"><div><label for="letter-spacing">Letter spacing</label><input id="letter-spacing" type="number" min="0" max="12" step="0.5"></div><div><label for="line-height">Line height</label><input id="line-height" type="number" min="1" max="2" step="0.05"></div></div></details>
+        </div>
+        <div id="image-controls" hidden><label for="image-asset">Image</label><select id="image-asset"></select><p id="image-scope" class="hint"></p><label for="image-fit">Image fit</label><select id="image-fit"><option value="contain">Fit whole image</option><option value="cover">Fill box</option></select><label for="image-opacity">Opacity</label><input id="image-opacity" type="range" min="0" max="100"><button id="manage-image" class="text-button">Manage in My Assets</button></div>
+        <p class="hint canvas-help">Drag to move. Use corner handles to resize. While editing text, drag its blue label to move the box.</p>
+        <div class="button-row"><button id="duplicate" class="button"><svg aria-hidden="true"><use href="#i-copy"/></svg>Duplicate</button><button id="delete-element" class="button"><svg aria-hidden="true"><use href="#i-trash"/></svg>Delete</button></div>
+        <div class="layer-actions"><button id="send-back" class="text-button">Send backward</button><button id="bring-front" class="text-button">Bring forward</button></div>
+      </section>
+      <section class="properties-section"><h2>Brand &amp; background</h2><button id="open-assets" class="button wide">Choose from My Assets</button><label for="background-color">Background color</label><input id="background-color" type="color"><label class="check"><input id="artwork-toggle" type="checkbox" checked>Show template artwork</label><button id="reset-template" class="text-button">Reset this template</button></section>
+      <section class="properties-section export-section"><h2>PNG export</h2><label for="export-scale">Resolution</label><select id="export-scale"></select><button id="export-all" class="button wide"><svg aria-hidden="true"><use href="#i-download"/></svg>Export all (ZIP)</button><p class="hint">Full-resolution images. No selection handles or editor controls.</p></section>
+    </aside>
+  </main>
+  <div id="busy-panel" class="busy-panel" hidden><div><strong id="busy-title">Preparing badges</strong><p id="busy-status" role="status" aria-live="polite"></p></div><button id="cancel-export" class="button">Cancel</button></div>
+  <input type="file" id="csv-file" accept=".csv,text/csv" hidden><input type="file" id="asset-file" accept="image/png,image/jpeg,image/webp" multiple hidden><input type="file" id="replace-asset-file" accept="image/png,image/jpeg,image/webp" hidden><input type="file" id="project-file" accept=".json,application/json" hidden>
+  <noscript><p class="noscript">Enable JavaScript to open the offline studio. All editing happens on your device.</p></noscript>
+</body>
+</html>

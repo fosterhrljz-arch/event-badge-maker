@@ -1,0 +1,155 @@
+{
+  "timestamp": "2026-11-06T10:50:41.612Z",
+  "browser": "156.0.8078.80",
+  "playwright": "1.62.1",
+  "url": "file:///C:/Users/TTK/Documents/ChatGPT/Session/event-badge-maker/index.html",
+  "mode": "file://, network offline",
+  "viewports": [
+    "1536x1024",
+    "320x740",
+    "390x844",
+    "768x1024"
+  ],
+  "errors": [],
+  "networkRequests": [],
+  "passed": 23,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Offline file launch: correct title, meaningful UI and 12 demo badges",
+      "status": "PASS",
+      "ms": 242
+    },
+    {
+      "name": "Event name updates every sheet live",
+      "status": "PASS",
+      "ms": 424
+    },
+    {
+      "name": "Pagination exposes the second six attendees and disables end controls",
+      "status": "PASS",
+      "ms": 67
+    },
+    {
+      "name": "Three distinct designs render correctly and generate A4 demo PDFs",
+      "status": "PASS",
+      "ms": 825
+    },
+    {
+      "name": "Print geometry: 90 × 80 mm, 6 mm gaps and all pages visible",
+      "status": "PASS",
+      "ms": 10,
+      "detail": {
+        "width": 89.99967447916667,
+        "height": 79.99925130208332,
+        "gapX": 5.998600260416667,
+        "gapY": 5.998600260416667,
+        "sheets": [
+          {
+            "visibility": "visible",
+            "width": 185.99794921875,
+            "height": 272.9962565104167,
+            "breakAfter": "page"
+          },
+          {
+            "visibility": "visible",
+            "width": 185.99794921875,
+            "height": 272.9962565104167,
+            "breakAfter": "auto"
+          }
+        ],
+        "editorDisplay": "none"
+      }
+    },
+    {
+      "name": "Paste quoted CSV, Unicode, empty organization and default role",
+      "status": "PASS",
+      "ms": 264
+    },
+    {
+      "name": "Import a CSV file and import the same file again",
+      "status": "PASS",
+      "ms": 104
+    },
+    {
+      "name": "Import button opens a native file chooser",
+      "status": "PASS",
+      "ms": 46
+    },
+    {
+      "name": "Malformed data clears stale badges and disables print",
+      "status": "PASS",
+      "ms": 361
+    },
+    {
+      "name": "Empty and header-only lists show an empty state",
+      "status": "PASS",
+      "ms": 484
+    },
+    {
+      "name": "Missing event name blocks printing and recovers on edit",
+      "status": "PASS",
+      "ms": 447
+    },
+    {
+      "name": "HTML and script-like data are rendered as literal text",
+      "status": "PASS",
+      "ms": 237
+    },
+    {
+      "name": "Maximum-length names, event, organization and role fit in all designs",
+      "status": "PASS",
+      "ms": 572
+    },
+    {
+      "name": "Over-limit fields produce errors instead of truncated names",
+      "status": "PASS",
+      "ms": 247
+    },
+    {
+      "name": "Oversized file preserves the current attendee list and explains the failure",
+      "status": "PASS",
+      "ms": 146
+    },
+    {
+      "name": "1, 6, 7, 12 and 13 attendees paginate without extra sheets",
+      "status": "PASS",
+      "ms": 1617
+    },
+    {
+      "name": "1000-attendee limit renders 167 pages and rejects attendee 1001",
+      "status": "PASS",
+      "ms": 4063
+    },
+    {
+      "name": "Print button invokes browser printing with valid data",
+      "status": "PASS",
+      "ms": 44
+    },
+    {
+      "name": "Browser print command flushes a pending edit before printing",
+      "status": "PASS",
+      "ms": 11
+    },
+    {
+      "name": "Mobile and tablet layouts have no horizontal overflow",
+      "status": "PASS",
+      "ms": 627
+    },
+    {
+      "name": "Keyboard radio navigation selects a design and shows focus",
+      "status": "PASS",
+      "ms": 68
+    },
+    {
+      "name": "Reload restores demo and no attendee data is stored",
+      "status": "PASS",
+      "ms": 326
+    },
+    {
+      "name": "No network requests, runtime errors, warnings or framework overlays",
+      "status": "PASS",
+      "ms": 17
+    }
+  ]
+}

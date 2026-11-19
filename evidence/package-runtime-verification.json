@@ -1,0 +1,14 @@
+{
+  "tested_extracted_runtime_matches_delivery": true,
+  "browser_checks_passed": 56,
+  "sha256": {
+    "index.html": "d06b8894f2fab79175b42ccec8b994572f8e0add8fd4a0c9e0a1250526ea60aa",
+    "styles.css": "8976880af505778bbdc3e919a357cebdfe608685abcaec58abd4eb06d091fcc8",
+    "app.js": "02c28c910fa034668b608e875ec81abaa2155f16daac7f1a8d2865cbd24728b2",
+    "core.js": "b13894d814364ddeafe9b81186f5e0af6c54c56099fa7c0a0a1fc07da864efc9",
+    "model.js": "8ad898379f8ca604fc6394c79f33c72ca1b0c0bd08b039a098b7f9843d6c6f05",
+    "renderer.js": "9eb36656eb3ff7d6eb95db2e79a7bf63066d976036dd7bd5557e0c1b8fa2b7bd",
+    "zip.js": "b72bb45f496e8060406125e7d193b1c1235b9cd666e50e9cb22825f7e806b194",
+    "icon.svg": "f569f61fbaf53f0935207ab4aa854553fd2671349d5fc9841359ab12b1315768"
+  }
+}

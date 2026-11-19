@@ -1,0 +1,10 @@
+{
+  "name": "event-badge-maker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An offline, dependency-free printable event badge maker.",
+  "scripts": {
+    "test": "node --test tests/core.test.cjs",
+    "test:browser": "node tests/browser.cjs"
+  }
+}

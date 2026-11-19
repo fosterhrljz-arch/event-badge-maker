@@ -1,0 +1,10 @@
+{
+  "name": "event-badge-maker-studio",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Offline badge studio with direct text editing, local assets, deliberate image placement and high-resolution PNG export.",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "test:browser": "node tests/browser.cjs"
+  }
+}

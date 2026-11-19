@@ -1,0 +1,94 @@
+{
+  "passed": 22,
+  "failed": 0,
+  "results": [
+    {
+      "name": "contour.png: PNG chunks, dimensions, CRC and pixel stream",
+      "status": "passed"
+    },
+    {
+      "name": "editorial.png: PNG chunks, dimensions, CRC and pixel stream",
+      "status": "passed"
+    },
+    {
+      "name": "executive.png: PNG chunks, dimensions, CRC and pixel stream",
+      "status": "passed"
+    },
+    {
+      "name": "index.png: PNG chunks, dimensions, CRC and pixel stream",
+      "status": "passed"
+    },
+    {
+      "name": "modular.png: PNG chunks, dimensions, CRC and pixel stream",
+      "status": "passed"
+    },
+    {
+      "name": "signal.png: PNG chunks, dimensions, CRC and pixel stream",
+      "status": "passed"
+    },
+    {
+      "name": "spectrum.png: PNG chunks, dimensions, CRC and pixel stream",
+      "status": "passed"
+    },
+    {
+      "name": "split.png: PNG chunks, dimensions, CRC and pixel stream",
+      "status": "passed"
+    },
+    {
+      "name": "studio.png: PNG chunks, dimensions, CRC and pixel stream",
+      "status": "passed"
+    },
+    {
+      "name": "vector.png: PNG chunks, dimensions, CRC and pixel stream",
+      "status": "passed"
+    },
+    {
+      "name": "001-avery-morgan.png: ZIP extraction, CRC and complete PNG",
+      "status": "passed"
+    },
+    {
+      "name": "002-jordan-lee.png: ZIP extraction, CRC and complete PNG",
+      "status": "passed"
+    },
+    {
+      "name": "003-priya-shah.png: ZIP extraction, CRC and complete PNG",
+      "status": "passed"
+    },
+    {
+      "name": "004-mateo-rivera.png: ZIP extraction, CRC and complete PNG",
+      "status": "passed"
+    },
+    {
+      "name": "005-camille-laurent.png: ZIP extraction, CRC and complete PNG",
+      "status": "passed"
+    },
+    {
+      "name": "006-noah-park.png: ZIP extraction, CRC and complete PNG",
+      "status": "passed"
+    },
+    {
+      "name": "007-amara-okafor.png: ZIP extraction, CRC and complete PNG",
+      "status": "passed"
+    },
+    {
+      "name": "008-elliot-chen.png: ZIP extraction, CRC and complete PNG",
+      "status": "passed"
+    },
+    {
+      "name": "009-sofia-andersson.png: ZIP extraction, CRC and complete PNG",
+      "status": "passed"
+    },
+    {
+      "name": "010-theo-williams.png: ZIP extraction, CRC and complete PNG",
+      "status": "passed"
+    },
+    {
+      "name": "011-isla-bennett.png: ZIP extraction, CRC and complete PNG",
+      "status": "passed"
+    },
+    {
+      "name": "012-rafael-costa.png: ZIP extraction, CRC and complete PNG",
+      "status": "passed"
+    }
+  ]
+}

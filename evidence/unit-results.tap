@@ -1,0 +1,382 @@
+TAP version 13
+# Subtest: demo contains 12 fictional attendees and agrees with the sample file
+ok 1 - demo contains 12 fictional attendees and agrees with the sample file
+  ---
+  duration_ms: 5.081
+  type: 'test'
+  ...
+# Subtest: UTF-8 BOM, CRLF, blank lines and surrounding whitespace
+ok 2 - UTF-8 BOM, CRLF, blank lines and surrounding whitespace
+  ---
+  duration_ms: 0.4258
+  type: 'test'
+  ...
+# Subtest: quoted commas and escaped double quotes
+ok 3 - quoted commas and escaped double quotes
+  ---
+  duration_ms: 0.2859
+  type: 'test'
+  ...
+# Subtest: multiline quoted values are normalized for badges
+ok 4 - multiline quoted values are normalized for badges
+  ---
+  duration_ms: 0.1624
+  type: 'test'
+  ...
+# Subtest: reordered, case-insensitive headers and British organisation spelling
+ok 5 - reordered, case-insensitive headers and British organisation spelling
+  ---
+  duration_ms: 0.2154
+  type: 'test'
+  ...
+# Subtest: additional named columns are ignored
+ok 6 - additional named columns are ignored
+  ---
+  duration_ms: 0.158
+  type: 'test'
+  ...
+# Subtest: missing required headers explain the problem
+ok 7 - missing required headers explain the problem
+  ---
+  duration_ms: 0.2976
+  type: 'test'
+  ...
+# Subtest: duplicate and alias-colliding headers are rejected
+ok 8 - duplicate and alias-colliding headers are rejected
+  ---
+  duration_ms: 0.1826
+  type: 'test'
+  ...
+# Subtest: unclosed quotes are rejected with line numbers
+ok 9 - unclosed quotes are rejected with line numbers
+  ---
+  duration_ms: 0.2178
+  type: 'test'
+  ...
+# Subtest: stray quotes and text after closing quotes are rejected
+ok 10 - stray quotes and text after closing quotes are rejected
+  ---
+  duration_ms: 0.2799
+  type: 'test'
+  ...
+# Subtest: whitespace after a closing quote is accepted
+ok 11 - whitespace after a closing quote is accepted
+  ---
+  duration_ms: 0.1531
+  type: 'test'
+  ...
+# Subtest: extra and missing cells are rejected rather than shifted
+ok 12 - extra and missing cells are rejected rather than shifted
+  ---
+  duration_ms: 0.1663
+  type: 'test'
+  ...
+# Subtest: blank input, blank records and header-only lists have no attendees
+ok 13 - blank input, blank records and header-only lists have no attendees
+  ---
+  duration_ms: 0.1459
+  type: 'test'
+  ...
+# Subtest: a populated record without a name fails the whole import
+ok 14 - a populated record without a name fails the whole import
+  ---
+  duration_ms: 0.3569
+  type: 'test'
+  ...
+# Subtest: organization can be empty and missing role defaults to Attendee
+ok 15 - organization can be empty and missing role defaults to Attendee
+  ---
+  duration_ms: 0.2847
+  type: 'test'
+  ...
+# Subtest: duplicate names represent distinct badges
+ok 16 - duplicate names represent distinct badges
+  ---
+  duration_ms: 1.0441
+  type: 'test'
+  ...
+# Subtest: non-ASCII names and emoji are preserved
+ok 17 - non-ASCII names and emoji are preserved
+  ---
+  duration_ms: 0.273
+  type: 'test'
+  ...
+# Subtest: HTML-like values remain ordinary data
+ok 18 - HTML-like values remain ordinary data
+  ---
+  duration_ms: 0.1164
+  type: 'test'
+  ...
+# Subtest: field limits accept the boundary and reject one character over
+ok 19 - field limits accept the boundary and reject one character over
+  ---
+  duration_ms: 0.3473
+  type: 'test'
+  ...
+# Subtest: input and attendee limits prevent unbounded work
+ok 20 - input and attendee limits prevent unbounded work
+  ---
+  duration_ms: 19.1985
+  type: 'test'
+  ...
+# Subtest: control characters are rejected
+ok 21 - control characters are rejected
+  ---
+  duration_ms: 0.3883
+  type: 'test'
+  ...
+# Subtest: error lines account for quoted newlines
+ok 22 - error lines account for quoted newlines
+  ---
+  duration_ms: 0.0951
+  type: 'test'
+  ...
+# Subtest: reader rejects non-text input
+ok 23 - reader rejects non-text input
+  ---
+  duration_ms: 0.8768
+  type: 'test'
+  ...
+# Subtest: all ten original template definitions are unchanged from version 2
+ok 24 - all ten original template definitions are unchanged from version 2
+  ---
+  duration_ms: 4.6594
+  type: 'test'
+  ...
+# Subtest: bound name edits update one row and preserve its binding and identity
+ok 25 - bound name edits update one row and preserve its binding and identity
+  ---
+  duration_ms: 4.1768
+  type: 'test'
+  ...
+# Subtest: independent edits preserve extra columns, reordered headers and quoted cells
+ok 26 - independent edits preserve extra columns, reordered headers and quoted cells
+  ---
+  duration_ms: 0.2981
+  type: 'test'
+  ...
+# Subtest: invalid bound edits leave the project unchanged
+ok 27 - invalid bound edits leave the project unchanged
+  ---
+  duration_ms: 2.4785
+  type: 'test'
+  ...
+# Subtest: organization and role edits do not affect other attendees
+ok 28 - organization and role edits do not affect other attendees
+  ---
+  duration_ms: 0.8722
+  type: 'test'
+  ...
+# Subtest: custom text stays template-local while event/company data stays shared
+ok 29 - custom text stays template-local while event/company data stays shared
+  ---
+  duration_ms: 0.4844
+  type: 'test'
+  ...
+# Subtest: adding a library asset creates zero placements
+ok 30 - adding a library asset creates zero placements
+  ---
+  duration_ms: 0.7899
+  type: 'test'
+  ...
+# Subtest: image placement is limited to the chosen template
+ok 31 - image placement is limited to the chosen template
+  ---
+  duration_ms: 1.5704
+  type: 'test'
+  ...
+# Subtest: badge-specific images follow attendee identity instead of the selected row
+ok 32 - badge-specific images follow attendee identity instead of the selected row
+  ---
+  duration_ms: 0.3685
+  type: 'test'
+  ...
+# Subtest: remove all placements includes backgrounds and badge-scoped images but keeps assets
+ok 33 - remove all placements includes backgrounds and badge-scoped images but keeps assets
+  ---
+  duration_ms: 0.3919
+  type: 'test'
+  ...
+# Subtest: remove current-design placements leaves other templates intact
+ok 34 - remove current-design placements leaves other templates intact
+  ---
+  duration_ms: 0.795
+  type: 'test'
+  ...
+# Subtest: reordering unchanged CSV records preserves badge-scoped asset identities
+ok 35 - reordering unchanged CSV records preserves badge-scoped asset identities
+  ---
+  duration_ms: 0.6198
+  type: 'test'
+  ...
+# Subtest: removed attendees leave no orphan badge-scoped placements
+ok 36 - removed attendees leave no orphan badge-scoped placements
+  ---
+  duration_ms: 0.2942
+  type: 'test'
+  ...
+# Subtest: version 2 projects migrate global logos and backgrounds into reusable assets
+ok 37 - version 2 projects migrate global logos and backgrounds into reusable assets
+  ---
+  duration_ms: 2.3184
+  type: 'test'
+  ...
+# Subtest: version 3 round-trips template and badge-specific image settings
+ok 38 - version 3 round-trips template and badge-specific image settings
+  ---
+  duration_ms: 1.4799
+  type: 'test'
+  ...
+# Subtest: validation rejects orphan identities and duplicate or remote assets
+ok 39 - validation rejects orphan identities and duplicate or remote assets
+  ---
+  duration_ms: 0.887
+  type: 'test'
+  ...
+# Subtest: ten original templates have five layouts in each orientation
+ok 40 - ten original templates have five layouts in each orientation
+  ---
+  duration_ms: 3.8515
+  type: 'test'
+  ...
+# Subtest: project instances and template defaults are independent
+ok 41 - project instances and template defaults are independent
+  ---
+  duration_ms: 7.2502
+  type: 'test'
+  ...
+# Subtest: saved project round-trips through strict validation
+ok 42 - saved project round-trips through strict validation
+  ---
+  duration_ms: 2.6289
+  type: 'test'
+  ...
+# Subtest: text resolves attendee, event, company and custom bindings
+ok 43 - text resolves attendee, event, company and custom bindings
+  ---
+  duration_ms: 0.5397
+  type: 'test'
+  ...
+# Subtest: element geometry stays inside the badge
+ok 44 - element geometry stays inside the badge
+  ---
+  duration_ms: 0.2711
+  type: 'test'
+  ...
+# Subtest: filenames are unique by row and safe for ZIP paths
+ok 45 - filenames are unique by row and safe for ZIP paths
+  ---
+  duration_ms: 0.6067
+  type: 'test'
+  ...
+# Subtest: project validation rejects version
+ok 46 - project validation rejects version
+  ---
+  duration_ms: 0.7141
+  type: 'test'
+  ...
+# Subtest: project validation rejects unknown template
+ok 47 - project validation rejects unknown template
+  ---
+  duration_ms: 0.2498
+  type: 'test'
+  ...
+# Subtest: project validation rejects remote asset
+ok 48 - project validation rejects remote asset
+  ---
+  duration_ms: 0.9557
+  type: 'test'
+  ...
+# Subtest: project validation rejects SVG asset
+ok 49 - project validation rejects SVG asset
+  ---
+  duration_ms: 0.4318
+  type: 'test'
+  ...
+# Subtest: project validation rejects missing image asset
+ok 50 - project validation rejects missing image asset
+  ---
+  duration_ms: 0.6221
+  type: 'test'
+  ...
+# Subtest: project validation rejects duplicate IDs
+ok 51 - project validation rejects duplicate IDs
+  ---
+  duration_ms: 0.7614
+  type: 'test'
+  ...
+# Subtest: project validation rejects nonfinite position
+ok 52 - project validation rejects nonfinite position
+  ---
+  duration_ms: 0.6255
+  type: 'test'
+  ...
+# Subtest: project validation rejects unapproved font
+ok 53 - project validation rejects unapproved font
+  ---
+  duration_ms: 0.5468
+  type: 'test'
+  ...
+# Subtest: project validation rejects invalid color
+ok 54 - project validation rejects invalid color
+  ---
+  duration_ms: 0.5012
+  type: 'test'
+  ...
+# Subtest: project validation rejects oversized type
+ok 55 - project validation rejects oversized type
+  ---
+  duration_ms: 0.6068
+  type: 'test'
+  ...
+# Subtest: project validation rejects oversized text
+ok 56 - project validation rejects oversized text
+  ---
+  duration_ms: 0.4297
+  type: 'test'
+  ...
+# Subtest: project validation rejects changed canvas dimensions
+ok 57 - project validation rejects changed canvas dimensions
+  ---
+  duration_ms: 0.371
+  type: 'test'
+  ...
+# Subtest: project validation rejects missing template
+ok 58 - project validation rejects missing template
+  ---
+  duration_ms: 1.2075
+  type: 'test'
+  ...
+# Subtest: project validation rejects too many elements
+ok 59 - project validation rejects too many elements
+  ---
+  duration_ms: 0.821
+  type: 'test'
+  ...
+# Subtest: project validation strips unknown fields and clamps geometry
+ok 60 - project validation strips unknown fields and clamps geometry
+  ---
+  duration_ms: 0.7276
+  type: 'test'
+  ...
+# Subtest: CRC32 matches the standard test vector
+ok 61 - CRC32 matches the standard test vector
+  ---
+  duration_ms: 0.1905
+  type: 'test'
+  ...
+# Subtest: ZIP rejects paths and creates correct directory counts and offsets
+ok 62 - ZIP rejects paths and creates correct directory counts and offsets
+  ---
+  duration_ms: 0.6082
+  type: 'test'
+  ...
+1..62
+# tests 62
+# suites 0
+# pass 62
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 173.7743

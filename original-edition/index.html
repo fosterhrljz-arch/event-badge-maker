@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Event Badge Maker</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="core.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#editor">Skip to badge editor</a>
+  <header class="topbar screen-only">
+    <a class="brand" href="index.html" aria-label="Event Badge Maker home">
+      <svg viewBox="0 0 32 36" aria-hidden="true"><rect x="3" y="9" width="26" height="24" rx="4"/><rect x="12" y="2" width="8" height="10" rx="2"/><path d="M10 20h12M10 26h8"/></svg>
+      <span>Event Badge Maker</span>
+    </a>
+    <span class="offline-note"><span aria-hidden="true"></span>Offline. On your device.</span>
+  </header>
+  <section class="intro screen-only" aria-labelledby="page-title">
+    <div><h1 id="page-title">Good names. Great first impressions.</h1><p>Turn your guest list into print-ready badges.</p></div>
+    <button class="button primary" id="print-button" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H3V9h18v9h-3M6 14h12v7H6zM17 11h1"/></svg>
+      Print / Save PDF
+    </button>
+  </section>
+  <main class="workspace">
+    <aside class="editor screen-only" id="editor" aria-label="Badge editor" tabindex="-1">
+      <section class="editor-section">
+        <h2><span class="step">01</span>Event details</h2>
+        <label for="event-name">Event name</label>
+        <input id="event-name" type="text" maxlength="100" value="Gathering of Good Ideas" autocomplete="off" aria-describedby="event-error">
+        <p class="error-message" id="event-error" hidden></p>
+      </section>
+      <section class="editor-section">
+        <h2><span class="step">02</span>Attendees</h2>
+        <label for="attendee-csv">CSV (name, organization, role)</label>
+        <textarea id="attendee-csv" spellcheck="false" autocomplete="off" aria-describedby="csv-help csv-status" placeholder="name,organization,role&#10;Avery Morgan,Northstar Studio,Speaker"></textarea>
+        <div class="import-actions">
+          <button class="button secondary" id="import-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-4 4 4-4 4 4M4 14v6h16v-6"/></svg>Import CSV</button>
+          <button class="button secondary" id="demo-button" type="button">Load demo</button>
+          <input id="csv-file" type="file" accept=".csv,text/csv" hidden>
+        </div>
+        <p class="help" id="csv-help">Include headers: name, organization, role. Use quotes around values containing commas.</p>
+        <p class="status" id="csv-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <p class="error-message" id="import-error" role="alert" hidden></p>
+      </section>
+      <fieldset class="editor-section design-fieldset">
+        <legend><span class="step">03</span>Badge design</legend>
+        <div class="design-options">
+          <label class="design-option"><input type="radio" name="design" value="minimal"><span class="mini-badge mini-minimal" aria-hidden="true"><i></i><b>Name</b><em></em><small></small></span><span>Minimal</span></label>
+          <label class="design-option"><input type="radio" name="design" value="conference" checked><span class="mini-badge mini-conference" aria-hidden="true"><i></i><b>Name</b><em></em><small></small></span><span>Conference</span></label>
+          <label class="design-option"><input type="radio" name="design" value="creative"><span class="mini-badge mini-creative" aria-hidden="true"><i></i><b>Name</b><em></em><small></small></span><span>Creative</span></label>
+        </div>
+      </fieldset>
+      <div class="print-notes">
+        <p>A4 portrait <span aria-hidden="true">/</span> 6 badges per page <span aria-hidden="true">/</span> 90 × 80 mm</p>
+        <details><summary>Print settings &amp; tips</summary><p>Choose <strong>A4</strong>, <strong>Portrait</strong>, <strong>100% / Actual size</strong>, and <strong>1 page per sheet</strong>. Keep the default margins supplied by this page. Turn <strong>headers and footers off</strong> and <strong>background graphics on</strong>.</p><p>Select <strong>Save as PDF</strong> in your browser’s destination menu, or select your printer. Print all pages. Cut along the dotted outlines.</p><p>Your edits stay in this tab only. Reloading restores the demo.</p></details>
+      </div>
+    </aside>
+    <section class="preview" aria-label="Badge print preview">
+      <div class="preview-toolbar screen-only"><h2>Print preview</h2><p id="preview-count" aria-live="polite">12 badges · 2 pages</p></div>
+      <div class="paper-area">
+        <div class="sheet-window" id="sheet-window"><div id="sheets"></div></div>
+        <div class="empty-state screen-only" id="empty-state" hidden><svg viewBox="0 0 32 36" aria-hidden="true"><rect x="3" y="9" width="26" height="24" rx="4"/><rect x="12" y="2" width="8" height="10" rx="2"/><path d="M10 20h12M10 26h8"/></svg><h3 id="empty-title">Add your attendees</h3><p id="empty-copy">Paste a CSV list or import a file to see your badges here.</p></div>
+      </div>
+      <nav class="pagination screen-only" aria-label="Preview pages"><button class="button icon-button" id="previous-page" type="button" aria-label="Previous preview page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button><span id="page-label" aria-live="polite">Page 1 of 2</span><button class="button icon-button" id="next-page" type="button" aria-label="Next preview page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button></nav>
+      <p class="fit-note screen-only" id="fit-note" role="status" hidden>Some text is small to fit. Shorter names or labels will be easier to read at a distance.</p>
+    </section>
+  </main>
+  <p class="print-blocked" id="print-blocked">No badges to print. Return to the app and enter a valid event name and attendee list.</p>
+  <noscript><p class="noscript">Enable JavaScript in your browser to create badges. Everything runs on your device.</p></noscript>
+</body>
+</html>
